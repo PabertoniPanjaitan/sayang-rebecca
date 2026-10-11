@@ -1,0 +1,22 @@
+WEBSITE SURPRISE UNTUK REBECCA OCTAVIA TAMBUNAN
+
+ISI:
+- index.html: website romantis responsif untuk HP
+- musik.mp3 (opsional): tambahkan sendiri file musik yang kamu punya hak untuk menggunakannya
+- foto: unggah foto kenangan kalian ke hosting dan ubah galeri jika ingin foto tampil pada semua perangkat
+
+CARA MUDAH MENERBITKAN GRATIS DENGAN GITHUB PAGES:
+1. Buat akun di https://github.com/ jika belum punya.
+2. Buat repository baru bernama misalnya surprise-rebecca. Pilih Public, lalu Create repository.
+3. Tekan Add file > Upload files, unggah index.html (dan musik.mp3/foto jika sudah disiapkan), lalu Commit changes.
+4. Buka Settings > Pages. Pada Build and deployment, pilih Deploy from a branch.
+5. Pilih branch main dan folder /(root), lalu Save.
+6. Tunggu beberapa menit. URL akan berbentuk https://USERNAME.github.io/surprise-rebecca/ (ganti USERNAME dengan nama akun GitHub kamu). Pastikan halaman bisa dibuka lewat browser HP sebelum membuat QR.
+7. Untuk membuat QR, buka generator QR yang tepercaya, misalnya https://www.qrcode-monkey.com/ atau https://www.qr-code-generator.com/, tempel URL website yang sudah aktif, lalu buat dan unduh QR PNG.
+8. Uji QR dengan kamera HP lain sebelum dicetak/diberikan. QR hanya akan bekerja selama link website tetap aktif.
+
+CATATAN PENTING:
+- Ganti/isi tanggal jadian lewat website; tanggal tersebut saat ini tidak ditetapkan sebelumnya.
+- Foto yang dipilih melalui kontrol galeri hanya preview lokal pada perangkat yang memilihnya. Untuk menampilkannya bagi penerima, upload file foto ke repository/hosting dan edit HTML agar memakai file foto tersebut.
+- Musik tidak disertakan. Tambahkan file musik.mp3 yang kamu punya hak untuk digunakan ke folder yang sama dengan index.html.
+- Jangan mengunggah foto atau informasi pribadi yang tidak ingin dibagikan secara publik; GitHub Pages pada repository publik dapat diakses siapa saja yang punya link.

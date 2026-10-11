@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffe5ee">
+<title>Untuk Adek Sayang ♡</title>
+<style>
+:root{--pink:#f7a9c4;--rose:#d94f83;--deep:#6d2444;--cream:#fff8fb;--soft:#ffe5ee}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--deep);background:linear-gradient(145deg,#fff8fb,#ffe5ee 55%,#fff0f5);overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.heart{position:absolute;bottom:-50px;color:#ee80a7;opacity:.65;animation:floatUp linear infinite}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+main{position:relative;z-index:1;width:min(780px,92%);margin:auto}
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:45px 16px}
+.eyebrow{letter-spacing:.22em;text-transform:uppercase;font:11px Arial,sans-serif;color:#b34a76}
+h1{font-size:clamp(2.6rem,10vw,5.2rem);line-height:1.02;margin:18px 0;color:#b83f70;font-weight:normal}
+.hero p{font-size:1.12rem;line-height:1.7;max-width:480px}
+.heart-mark{font-size:2.8rem;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{transform:scale(1.18)}}
+.btn{border:0;border-radius:999px;background:#c94f80;color:white;padding:14px 23px;box-shadow:0 9px 22px #d75b8938;transition:.2s}
+.btn:hover{transform:translateY(-2px);background:#ad3567}
+.btn.secondary{background:#fff;color:#a93867;border:1px solid #f1b6cb;box-shadow:none}
+section{padding:56px 0}
+.card{background:#ffffffc9;border:1px solid #f5c7d8;border-radius:24px;padding:clamp(22px,5vw,42px);box-shadow:0 18px 50px #a83c6410}
+.kicker{text-transform:uppercase;letter-spacing:.18em;font:11px Arial,sans-serif;color:#b64a77}
+h2{font-weight:normal;font-size:clamp(2rem,7vw,3.1rem);line-height:1.12;margin:12px 0 22px;color:#b83f70}
+.letter{font-size:1.08rem;line-height:1.95;white-space:pre-line}
+.signature{font-style:italic;font-size:1.35rem;color:#b83f70;margin-top:22px}
+.counter{text-align:center;background:#fff9fc;border-radius:20px;padding:26px 14px;border:1px dashed #e8a0bb}
+.counter strong{display:block;font-size:clamp(2rem,8vw,3.5rem);font-weight:normal;color:#bd4275;margin:10px 0}
+.small{font:13px/1.7 Arial,sans-serif;color:#8d526a}
+.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.photo{min-height:175px;aspect-ratio:4/5;border-radius:18px;border:1.5px dashed #dc8cac;background:linear-gradient(145deg,#fff0f6,#fbd2e1);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:15px;color:#9f4569;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.photo{position:relative}
+.photo span{font-size:2rem}.photo b{font-weight:normal;margin-top:8px}
+.photo input{max-width:100%;font:11px Arial,sans-serif;margin-top:12px}
+.reveal{display:none;margin-top:20px;padding:20px;border-radius:18px;background:#fff0f6;font-size:1.2rem;line-height:1.7;text-align:center}
+.reveal.show{display:block;animation:appear .7s ease}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+footer{text-align:center;padding:35px 0 60px;color:#a95c7b;font-size:.9rem}
+.music-note{font:12px Arial,sans-serif;margin-top:10px;color:#95506b}
+.pill{display:inline-block;border-radius:999px;background:#ffe5ef;padding:8px 12px;font:12px Arial,sans-serif}
+@media(max-width:480px){.photo-grid{gap:8px}.photo{min-height:145px;padding:9px}.card{border-radius:20px}.letter{font-size:1rem}}
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts"></div>
+<main>
+<header class="hero">
+  <div class="eyebrow">sebuah kejutan kecil, dari hati yang besar</div>
+  <div class="heart-mark">♡</div>
+  <h1>Untuk<br>Adek Sayang</h1>
+  <p>Rebecca Octavia Tambunan,<br>ada sesuatu yang ingin aku sampaikan… dan kali ini, aku menyiapkannya khusus untukmu. 💗</p>
+  <button class="btn" onclick="document.querySelector('#surat').scrollIntoView({behavior:'smooth'})">Buka surat kecilku 💌</button>
+  <div class="music-note">Putar musik saat kamu siap mendengarkan ♡</div>
+  <button class="btn secondary" id="musicBtn" style="margin-top:10px">♫ Putar musik</button>
+  <audio id="music" loop preload="auto">
+    <source src="./RCB.mp3" type="audio/mpeg">
+  </audio>
+
+</header>
+
+<section id="surat">
+  <div class="card">
+    <div class="kicker">dibaca pelan-pelan ya, sayang</div>
+    <h2>Untuk Adek Sayang, Rebecca ♡</h2>
+    <div class="letter">Hai, Adek Sayang…
+
+Kalau adek sedang membaca ini, berarti adek sudah menemukan kejutan kecil yang abg siapkan khusus untuk cintaku. Mungkin ini cuman bisa adek baca dalam hati, tapi setiap kata di sini aku harap bisa sampai ke tempat yang paling hangat di hati adek.
+
+Abang mungkin tidak selalu pande sekali dalam berkata tutur bahasa, hehe . Adek selalu berharganya dalam hidup abang, selama abang berjumpa dengan adek.
+
+Terima kasih Tuhan sudah mengenalkan Rebecca ke dalam hidup ku. Terima kasih untuk adeknya kalau lagi senyum, bercerita, perhatiannya, dan hal-hal sederhana yang mungkin buat abang sadari dan selalu senyum, intinya bisa membuat hari hari abg jauh lebih baik.
+
+Abg tidak bisa menjanjikan bahwa setiap hari akan selalu mudah kita lewatin. Namun, abg selalu ingin terus belajar menjadi seseorang yang menjadi pemimpin, menghargai, menemani, dan memilih untuk memperjuangkan hubungan ini dengan cara yang baik.
+
+Kondisi kita juga lagi tidak di kota yang sama, tapii abang mau segala sesuatu yang kita harapkan tetap sama. maafin juga abangnya ga bisa merayakan bersama adek di hari ulang tahun adek. 
+
+Adek Sayang, adek bukan sekadar seseorang yang aku sayangi hari ini. Rebecca adalah seseorang yang ingin aku kenal lebih dalam, aku hargai lebih baik, dan abg bahagiakan lewat hal-hal kecil yang nyata—bukan cuma kata-kata manis.
+
+Terima kasih sudah hadir dalam ceritaku, Rebecca Octavia Tambunan. Semoga kita terus punya banyak alasan untuk tersenyum, banyak kenangan untuk disimpan, dan keberanian untuk melewati hari-hari yang tidak selalu sempurna bersama-sama.
+
+Aku sayang kamu, Adek Sayang. Hari ini, dan semoga dalam banyak hari yang masih menunggu kita. ♡</div>
+    <div class="signature">Dari seseorang yang memilihmu 💗</div>
+  </div>
+</section>
+
+<section>
+  <div class="counter">
+    <div class="kicker">waktu yang jadi kenangan</div>
+    <h2>Perjalanan kita ♡</h2>
+
+    <p class="small">
+      Sejak 27 April 2026, setiap hari adalah kenangan kita. 💗
+    </p>
+
+    <div class="total-days">
+      <strong id="days">167</strong>
+      <span>hari bersama ♡</span>
+    </div>
+  </div>
+</section>
+
+<section id="kenangan">
+  <div class="kicker">potongan cerita kita</div>
+  <h2>Galeri kenangan 📷</h2>
+  <p class="small">
+    Setiap foto menyimpan cerita indah tentang kita ❤️
+  </p>
+
+  <div class="photo-grid">
+    <div class="photo">
+      <img src="E:\Download\Download from Chrome\surprise_rebecca_website\sayang-rebecca\images\1.jpeg" alt="Kenangan pertama">
+      <b>Kenangan pertama</b>
+    </div>
+
+    <div class="photo">
+      <img src="E:\Download\Download from Chrome\surprise_rebecca_website\sayang-rebecca\images\5.jpeg" alt="Senyum kesayanganku">
+      <b>Senyum kesayanganku</b>
+    </div>
+
+    <div class="photo">
+      <img src="E:\Download\Download from Chrome\surprise_rebecca_website\sayang-rebecca\images\3.jpeg" alt="Hari yang tak terlupakan">
+      <b>Hari yang tak terlupakan</b>
+    </div>
+
+    <div class="photo">
+      <img src="E:\Download\Download from Chrome\surprise_rebecca_website\sayang-rebecca\images\aa.jpeg" alt="Kenangan kita">
+      <b>Dan masih banyak lagi…</b>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Dibuat dengan sepenuh hati, khusus untuk Rebecca Octavia Tambunan ♡<br>
+  <span class="small">Satu QR kecil, dengan banyak rasa sayang.</span>
+</footer>
+</main>
+
+```html
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Animasi hati
+  const heartBox = document.getElementById("hearts");
+
+  if (heartBox) {
+    for (let i = 0; i < 22; i++) {
+      const h = document.createElement("span");
+      h.className = "heart";
+      h.textContent = ["♡", "♥", "ღ"][i % 3];
+      h.style.left = Math.random() * 100 + "%";
+      h.style.animationDuration = 9 + Math.random() * 12 + "s";
+      h.style.animationDelay = -Math.random() * 18 + "s";
+      h.style.fontSize = 14 + Math.random() * 20 + "px";
+      heartBox.appendChild(h);
+    }
+  }
+
+  // Tombol musik
+  const music = document.getElementById("music");
+  const musicBtn = document.getElementById("musicBtn");
+
+  if (music && musicBtn) {
+    // Autoplay boleh dicoba, tetapi browser bisa memblokirnya.
+    music.play().catch(() => {
+      musicBtn.textContent = "♫ Putar musik";
+    });
+
+    musicBtn.addEventListener("click", async () => {
+      try {
+        if (music.paused) {
+          await music.play();
+        } else {
+          music.pause();
+        }
+      } catch (error) {
+        console.error("Musik gagal diputar:", error);
+        musicBtn.textContent = "Musik gagal diputar — coba lagi";
+      }
+    });
+
+    music.addEventListener("play", () => {
+      musicBtn.textContent = "♫ Jeda musik";
+    });
+
+    music.addEventListener("pause", () => {
+      musicBtn.textContent = "♫ Putar musik";
+    });
+
+    music.addEventListener("ended", () => {
+      musicBtn.textContent = "♫ Putar musik";
+    });
+  }
+});
+</script>
+```
+
+</body>
+</html>
